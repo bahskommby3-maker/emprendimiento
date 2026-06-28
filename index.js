@@ -61,7 +61,7 @@
                         <div class="card-back-overlay">
                             <h3>Detalles del Producto</h3>
                             <p>Este compuesto avanzado estimula la síntesis de colágeno, reduce líneas de expresión provocadas por el estrés diario y proporciona una hidratación profunda inteligente las 24 horas del día.</p>
-                            <a href="https://wa.me/5544444448?text=%C2%A1Hola%20S%20%26%20A%20Cosm%C3%A9ticos%21%20Me%20interesa%20el%20S%C3%A9rum%20Renovador%20Infinito%20%28%2429.99%29." target="_blank" rel="noopener noreferrer" class="btn-action">Pedir por WhatsApp</a>
+                            <a href="https://wa.me/595987235627?text=%C2%A1Hola%20S%20%26%20A%20Cosm%C3%A9ticos%21%20Me%20interesa%20el%20S%C3%A9rum%20Renovador%20Infinito%20%28%2429.99%29." target="_blank" rel="noopener noreferrer" class="btn-action">Pedir por WhatsApp</a>
                         </div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                         <div class="card-back-overlay">
                             <h3>Detalles del Producto</h3>
                             <p>Incluye 12 tonos hiper-pigmentados de larga duración. Una mezcla perfecta de acabados mate aterciopelados y metálicos brillantes diseñados para adaptarse a cualquier tipo de luz ambiental.</p>
-                            <a href="https://wa.me/5544444448?text=%C2%A1Hola%20S%20%26%20A%20Cosm%C3%A9ticos%21%20Me%20interesa%20la%20Paleta%20Crom%C3%A1tica%20Neo-Glow%20%28%2435.50%29." target="_blank" rel="noopener noreferrer" class="btn-action">Pedir por WhatsApp</a>
+                            <a href="https://wa.me/595987235627?text=%C2%A1Hola%20S%20%26%20A%20Cosm%C3%A9ticos%21%20Me%20interesa%20la%20Paleta%20Crom%C3%A1tica%20Neo-Glow%20%28%2435.50%29." target="_blank" rel="noopener noreferrer" class="btn-action">Pedir por WhatsApp</a>
                         </div>
                     </div>
                 </div>
@@ -118,7 +118,7 @@
                         <div class="card-back-overlay">
                             <h3 class="text-cyan">Detalles del Dispositivo</h3>
                             <p>Equipado con monitoreo continuo de ritmo cardíaco, medición de oxígeno, tracking de sueño profundo y batería de larga duración con hasta 14 días de autonomía sin recargas.</p>
-                            <a href="https://wa.me/5544444448?text=%C2%A1Hola%20S%20%26%20A%20Cosm%C3%A9ticos%21%20Me%20interesa%20el%20Smartwatch%20Aura%20Quantum%20V3%20%28%24120.00%29." target="_blank" rel="noopener noreferrer" class="btn-action btn-cyan">Pedir por WhatsApp</a>
+                            <a href="https://wa.me/595987235627?text=%C2%A1Hola%20S%20%26%20A%20Cosm%C3%A9ticos%21%20Me%20interesa%20el%20Smartwatch%20Aura%20Quantum%20V3%20%28%24120.00%29." target="_blank" rel="noopener noreferrer" class="btn-action btn-cyan">Pedir por WhatsApp</a>
                         </div>
                     </div>
                 </div>
@@ -141,7 +141,7 @@
                         <div class="card-back-overlay">
                             <h3 class="text-cyan">Detalles del Dispositivo</h3>
                             <p>Auriculares premium con cancelación de ruido de última generación que aísla el entorno exterior. Conectividad Bluetooth 5.2 estable y estuche con soporte para carga rápida inalámbrica.</p>
-                            <a href="https://wa.me/5544444448?text=%C2%A1Hola%20S%20%26%20A%20Cosm%C3%A9ticos%21%20Me%20interesa%20los%20Auriculares%20H%C3%ADbridos%20NeoSound%20%28%2489.99%29." target="_blank" rel="noopener noreferrer" class="btn-action btn-cyan">Pedir por WhatsApp</a>
+                            <a href="https://wa.me/595987235627?text=%C2%A1Hola%20S%20%26%20A%20Cosm%C3%A9ticos%21%20Me%20interesa%20los%20Auriculares%20H%C3%ADbridos%20NeoSound%20%28%2489.99%29." target="_blank" rel="noopener noreferrer" class="btn-action btn-cyan">Pedir por WhatsApp</a>
                         </div>
                     </div>
                 </div>
@@ -159,7 +159,7 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/5544444448" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contacto por WhatsApp">
+    <a href="https://wa.me/595987235627" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contacto por WhatsApp">
         <div class="pulse-ring"></div>
         <i class="fab fa-whatsapp"></i>
     </a>
