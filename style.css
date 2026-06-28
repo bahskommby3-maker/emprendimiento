@@ -213,7 +213,7 @@ body {
     position: relative;
 }
 
-/* --- El Rejilla de Productos Esmerada --- */
+/* --- Rejilla de Productos --- */
 .grid-products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -222,7 +222,7 @@ body {
     margin: 0 auto;
 }
 
-/* --- Ingeniería del Efecto Flip Tarjeta --- */
+/* --- Efecto Flip Tarjeta --- */
 .card-container {
     perspective: 2000px;
     height: 520px;
@@ -275,12 +275,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Enlaces de Recursos de Imágenes de Alta Estética */
-.bg-cosmetic-1 { background-image: url('https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=600'); }
-.bg-cosmetic-2 { background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=600'); }
-.bg-tech-1 { background-image: url('https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?q=80&w=600'); }
-.bg-tech-2 { background-image: url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=600'); }
-
 .card-body {
     padding: 30px;
     display: flex;
@@ -329,7 +323,7 @@ body {
     transition: var(--transition-smooth);
 }
 
-/* Tarjeta Trasera (Detalle Camuflado) */
+/* Tarjeta Trasera */
 .card-back {
     background-size: cover;
     background-position: center;
@@ -339,7 +333,7 @@ body {
 .card-back-overlay {
     width: 100%;
     height: 100%;
-    background-color: rgba(10, 12, 16, 0.94); /* Oscurecimiento premium */
+    background-color: rgba(10, 12, 16, 0.94);
     padding: 40px 30px;
     display: flex;
     flex-direction: column;
@@ -375,6 +369,7 @@ body {
     font-size: 11px;
     border-radius: 10px;
     letter-spacing: 1.5px;
+    text-decoration: none;
     cursor: pointer;
     transition: var(--transition-smooth);
 }
@@ -383,7 +378,7 @@ body {
     transform: scale(1.05);
 }
 
-/* --- Footer Elegante --- */
+/* --- Footer --- */
 .footer {
     background-color: var(--dark-deep);
     padding: 80px 20px;
@@ -427,7 +422,7 @@ body {
     letter-spacing: 2px;
 }
 
-/* --- Botón de WhatsApp Hiper-Detallado con Ondas de Pulso --- */
+/* --- Botón de WhatsApp con Pulso --- */
 .whatsapp-btn {
     position: fixed;
     bottom: 35px;
@@ -467,7 +462,7 @@ body {
     background-color: #1ebd54;
 }
 
-/* --- Diseño Adaptativo (Responsive Eficiente) --- */
+/* --- Diseño Adaptativo (Responsive) --- */
 @media (max-width: 900px) {
     .header { padding: 20px 5%; flex-direction: column; gap: 15px; }
     .nav a { margin: 0 15px; font-size: 12px; }
