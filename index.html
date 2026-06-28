@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beauty & Tech | Cosméticos y Tecnología</title>
+    <title>BEAUTYTECH | Cosmética Avanzada & Gadgets</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <div class="aurora-bg"></div>
+
     <header class="header">
-        <div class="logo">BEAUTY<span>TECH</span></div>
+        <a href="#" class="logo">BEAUTY<span>TECH</span></a>
         <nav class="nav">
             <a href="#inicio">Inicio</a>
             <a href="#cosmeticos">Cosméticos</a>
@@ -24,31 +26,40 @@
 
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <h1>El futuro de la belleza y la innovación</h1>
-            <p>Descubre la fusión perfecta entre el cuidado personal premium y los gadgets tecnológicos de última generación.</p>
-            <a href="#cosmeticos" class="btn-primary">Explorar Tienda</a>
+            <span class="hero-badge">El Futuro del Cuidado Personal</span>
+            <h1>Donde la ciencia de la belleza encuentra la innovación</h1>
+            <p>Sincroniza tu rutina diaria con dispositivos inteligentes y fórmulas celulares de última generación.</p>
+            <div class="hero-buttons">
+                <a href="#cosmeticos" class="btn-primary">Explorar Colección</a>
+                <a href="#tecnologia" class="btn-secondary">Ver Gadgets</a>
+            </div>
         </div>
     </section>
 
     <section id="cosmeticos" class="products-section">
-        <h2 class="section-title">Cosmética Premium</h2>
+        <div class="section-header">
+            <span class="section-tag">Colección Premium</span>
+            <h2 class="section-title">Cosmética Celular</h2>
+        </div>
+        
         <div class="grid-products">
-            
             <div class="card-container">
                 <div class="card">
                     <div class="card-front">
                         <div class="card-img bg-cosmetic-1"></div>
                         <div class="card-body">
-                            <h3>Sérum Renovador</h3>
-                            <p>Fórmula avanzada con ácido hialurónico para una piel radiante.</p>
-                            <span class="price">$29.99</span>
-                            <span class="btn-card-trigger">Ver Detalle</span>
+                            <h3>Sérum Renovador Infinito</h3>
+                            <p>Fórmula molecular adaptativa con ácido hialurónico triple.</p>
+                            <div class="card-footer-front">
+                                <span class="price">$29.99</span>
+                                <span class="btn-card-trigger">Ver Detalle <i class="fa-solid fa-arrow-rotate-right"></i></span>
+                            </div>
                         </div>
                     </div>
                     <div class="card-back bg-cosmetic-1">
                         <div class="card-back-overlay">
-                            <h3>Detalles del Producto</h3>
-                            <p>Este sérum de última generación estimula la producción natural de colágeno, reduce líneas de expresión y proporciona una hidratación profunda durante 24 horas. Ideal para todo tipo de pieles.</p>
+                            <h3>Ingeniería de la Piel</h3>
+                            <p>Este compuesto molecular estimula la síntesis de colágeno a nivel celular, revirtiendo el estrés oxidativo provocado por las pantallas y la luz azul. Hidratación profunda inteligente 24/7.</p>
                             <button class="btn-action">Añadir al Carrito</button>
                         </div>
                     </div>
@@ -60,45 +71,51 @@
                     <div class="card-front">
                         <div class="card-img bg-cosmetic-2"></div>
                         <div class="card-body">
-                            <h3>Paleta Neo-Glow</h3>
-                            <p>Pigmentación de larga duración con destellos futuristas y elegantes.</p>
-                            <span class="price">$35.50</span>
-                            <span class="btn-card-trigger">Ver Detalle</span>
+                            <h3>Paleta Cromática Neo-Glow</h3>
+                            <p>Pigmentos HD micronizados con destellos holográficos.</p>
+                            <div class="card-footer-front">
+                                <span class="price">$35.50</span>
+                                <span class="btn-card-trigger">Ver Detalle <i class="fa-solid fa-arrow-rotate-right"></i></span>
+                            </div>
                         </div>
                     </div>
                     <div class="card-back bg-cosmetic-2">
                         <div class="card-back-overlay">
-                            <h3>Detalles del Producto</h3>
-                            <p>Incluye 12 tonos de alta definición hiper-pigmentados. Una mezcla perfecta de acabados mate aterciopelados y metálicos brillantes diseñados para resistir todo el día sin pliegues.</p>
+                            <h3>Espectro Lumínico</h3>
+                            <p>Diseñada con partículas reflectoras que se adaptan a la luz ambiental. Doce tonos de larga duración con textura mantecosa y acabado híbrido satín-metálico. Sin pliegues, sin imperfecciones.</p>
                             <button class="btn-action">Añadir al Carrito</button>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <section id="tecnologia" class="products-section bg-light">
-        <h2 class="section-title">Tecnología & Gadgets</h2>
+    <section id="tecnologia" class="products-section dark-section">
+        <div class="section-header">
+            <span class="section-tag text-cyan">Ecosistema Inteligente</span>
+            <h2 class="section-title text-white">Tecnología & Dispositivos</h2>
+        </div>
+        
         <div class="grid-products">
-            
             <div class="card-container">
                 <div class="card">
-                    <div class="card-front">
+                    <div class="card-front dark-card-front">
                         <div class="card-img bg-tech-1"></div>
                         <div class="card-body">
-                            <h3>Smartwatch Aura V3</h3>
-                            <p>Monitoreo inteligente de salud, notificaciones y diseño ultradelgado.</p>
-                            <span class="price">$120.00</span>
-                            <span class="btn-card-trigger">Ver Detalle</span>
+                            <h3 class="text-white">Smartwatch Aura Quantum V3</h3>
+                            <p class="text-gray">Biométrica en tiempo real con chasis de titanio Aeroespacial.</p>
+                            <div class="card-footer-front">
+                                <span class="price text-cyan">$120.00</span>
+                                <span class="btn-card-trigger text-white border-white">Ver Detalle <i class="fa-solid fa-arrow-rotate-right"></i></span>
+                            </div>
                         </div>
                     </div>
                     <div class="card-back bg-tech-1">
                         <div class="card-back-overlay">
-                            <h3>Detalles del Producto</h3>
-                            <p>Equipado con sensor de ritmo cardíaco continuo, medición de oxígeno en sangre SpO2, tracking de sueño profundo y batería de larga duración (hasta 10 días de uso continuo). Sumergible a 5 ATM.</p>
-                            <button class="btn-action">Añadir al Carrito</button>
+                            <h3 class="text-cyan">Métricas de Vanguardia</h3>
+                            <p>Análisis avanzado del cortisol, niveles de hidratación cutánea y estrés. Su pantalla AMOLED de cristal de zafiro ofrece una autonomía sin precedentes de hasta 14 días bajo rendimiento óptimo.</p>
+                            <button class="btn-action btn-cyan">Añadir al Carrito</button>
                         </div>
                     </div>
                 </div>
@@ -106,36 +123,40 @@
 
             <div class="card-container">
                 <div class="card">
-                    <div class="card-front">
+                    <div class="card-front dark-card-front">
                         <div class="card-img bg-tech-2"></div>
                         <div class="card-body">
-                            <h3>Wireless NeoSound</h3>
-                            <p>Cancelación de ruido activa y audio de alta fidelidad para tu día a día.</p>
-                            <span class="price">$89.99</span>
-                            <span class="btn-card-trigger">Ver Detalle</span>
+                            <h3 class="text-white">Auriculares Híbridos NeoSound</h3>
+                            <p class="text-gray">Cancelación acústica cuántica y audio espacial inmersivo.</p>
+                            <div class="card-footer-front">
+                                <span class="price text-cyan">$89.99</span>
+                                <span class="btn-card-trigger text-white border-white">Ver Detalle <i class="fa-solid fa-arrow-rotate-right"></i></span>
+                            </div>
                         </div>
                     </div>
                     <div class="card-back bg-tech-2">
                         <div class="card-back-overlay">
-                            <h3>Detalles del Producto</h3>
-                            <p>Auriculares premium con tecnología ANC de última generación que bloquea el ruido exterior. Conectividad Bluetooth 5.2 estable, estuche de carga rápida inalámbrica y 30 horas de autonomía total.</p>
-                            <button class="btn-action">Añadir al Carrito</button>
+                            <h3 class="text-cyan">Aislamiento Absoluto</h3>
+                            <p>Procesador de audio neural que calibra el sonido según tu canal auditivo. Bloquea hasta 45dB de ruido exterior con transductores de grafeno para unos graves perfectos y agudos cristalinos.</p>
+                            <button class="btn-action btn-cyan">Añadir al Carrito</button>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
     <footer id="contacto" class="footer">
+        <div class="footer-glow"></div>
         <div class="footer-content">
             <p class="motivation-phrase">"La verdadera innovación externa comienza cuando decides brillar desde el interior."</p>
-            <p class="copyright">&copy; 2026 BEAUTYTECH. Todos los derechos reservados.</p>
+            <div class="footer-divider"></div>
+            <p class="copyright">&copy; 2026 BEAUTYTECH. Diseñando el estándar del mañana.</p>
         </div>
     </footer>
 
     <a href="https://wa.me/5544444448" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contacto por WhatsApp">
+        <div class="pulse-ring"></div>
         <i class="fab fa-whatsapp"></i>
     </a>
 

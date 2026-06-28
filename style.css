@@ -1,14 +1,22 @@
-/* --- Variables de Diseño y Reseteo --- */
+/* --- Arquitectura del Sistema de Diseño --- */
 :root {
-    --primary-color: #ff4a7d; /* Rosa Cosmético vibrante */
-    --secondary-color: #00f2fe; /* Azul Tecnológico cian */
-    --dark-color: #11141a;
-    --light-color: #f8f9fa;
-    --text-color: #333333;
-    --gradient-glow: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    --transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* Transición suave y cinematográfica para el giro */
+    --primary-glow: #ff4a7d;
+    --secondary-glow: #00f2fe;
+    --dark-deep: #0a0c10;
+    --dark-surface: #121620;
+    --light-surface: #ffffff;
+    --light-bg: #fdfdfd;
+    --text-main: #1f2329;
+    --text-muted: #64748b;
+    
+    --gradient-cosmetic: linear-gradient(135deg, #ff4a7d, #ff8a00);
+    --gradient-tech: linear-gradient(135deg, #00f2fe, #4facfe);
+    --gradient-luxury: linear-gradient(135deg, #ff4a7d, #00f2fe);
+    
+    --transition-smooth: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* --- Reset & Base Estética --- */
 * {
     margin: 0;
     padding: 0;
@@ -17,247 +25,322 @@
 
 html {
     scroll-behavior: smooth;
+    background-color: var(--light-bg);
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--text-color);
-    background-color: #ffffff;
-    line-height: 1.6;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-main);
+    overflow-x: hidden;
+    position: relative;
 }
 
-/* --- Encabezado / Navegación --- */
+/* Sutil efecto de luces de fondo (Aurora CSS) */
+.aurora-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: radial-gradient(circle at 10% 20%, rgba(255, 74, 125, 0.04) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(0, 242, 254, 0.04) 0%, transparent 40%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* --- Header de Alta Costura Digital --- */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
-    background-color: rgba(255, 255, 255, 0.95);
+    padding: 25px 8%;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 800;
-    letter-spacing: 2px;
-    color: var(--dark-color);
+    letter-spacing: 3px;
+    color: var(--dark-deep);
+    text-decoration: none;
 }
 
 .logo span {
-    background: var(--gradient-glow);
+    background: var(--gradient-luxury);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .nav a {
     text-decoration: none;
-    color: var(--dark-color);
+    color: var(--text-main);
     font-weight: 600;
-    margin-left: 30px;
-    font-size: 14px;
+    margin-left: 35px;
+    font-size: 13px;
     text-transform: uppercase;
-    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    transition: var(--transition-smooth);
+    opacity: 0.8;
 }
 
 .nav a:hover {
-    color: var(--primary-color);
+    color: var(--primary-glow);
+    opacity: 1;
 }
 
-/* --- Sección Héroe (Hero) --- */
+/* --- Sección Hero Impresionante --- */
 .hero {
-    height: 80vh;
-    background: linear-gradient(135deg, rgba(17, 20, 26, 0.85), rgba(17, 20, 26, 0.5)), 
-                url('https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1920') no-repeat center center/cover;
+    min-height: 90vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    padding: 0 8%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 60%, var(--light-bg)),
+                linear-gradient(135deg, rgba(10, 12, 16, 0.92), rgba(18, 22, 32, 0.85)), 
+                url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1920') no-repeat center center/cover;
     text-align: center;
     color: #ffffff;
-    padding: 0 20px;
+}
+
+.hero-badge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: inline-block;
+    margin-bottom: 25px;
+    backdrop-filter: blur(5px);
 }
 
 .hero-content h1 {
-    font-size: 48px;
+    font-size: clamp(32px, 5vw, 64px);
     font-weight: 800;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    line-height: 1.15;
+    max-width: 900px;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
 }
 
 .hero-content p {
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 auto 40px auto;
+    font-size: clamp(16px, 2vw, 20px);
+    max-width: 650px;
+    margin: 0 auto 45px auto;
+    color: rgba(255, 255, 255, 0.7);
     font-weight: 300;
 }
 
-.btn-primary {
-    display: inline-block;
-    padding: 15px 40px;
-    background: var(--gradient-glow);
-    color: #ffffff;
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 16px 38px;
+    border-radius: 12px;
     text-decoration: none;
-    font-weight: 600;
-    border-radius: 50px;
+    font-weight: 700;
+    font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 10px 20px rgba(255, 74, 125, 0.3);
-    transition: all 0.3s ease;
+    transition: var(--transition-smooth);
+}
+
+.btn-primary {
+    background: var(--gradient-luxury);
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(255, 74, 125, 0.3);
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 25px rgba(0, 242, 254, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0, 242, 254, 0.4);
 }
 
-/* --- Secciones de Productos --- */
-.products-section {
-    padding: 80px 8%;
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.bg-light {
-    background-color: var(--light-color);
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
 }
+
+/* --- Cabeceras de Sección Maquetadas --- */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: var(--primary-glow);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.text-cyan { color: var(--secondary-glow) !important; }
+.text-white { color: #ffffff !important; }
+.text-gray { color: #94a3b8 !important; }
+.border-white { border-color: rgba(255,255,255,0.3) !important; }
+.btn-cyan { background: var(--gradient-tech) !important; box-shadow: 0 10px 30px rgba(0, 242, 254, 0.2) !important;}
 
 .section-title {
-    text-align: center;
-    font-size: 32px;
+    font-size: clamp(26px, 3.5vw, 38px);
     font-weight: 800;
-    margin-bottom: 50px;
+    letter-spacing: -0.5px;
+}
+
+.products-section {
+    padding: 100px 8%;
+}
+
+.dark-section {
+    background-color: var(--dark-deep);
     position: relative;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-.section-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: var(--gradient-glow);
-    margin: 10px auto 0 auto;
-    border-radius: 2px;
-}
-
+/* --- El Rejilla de Productos Esmerada --- */
 .grid-products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 45px;
+    max-width: 1250px;
     margin: 0 auto;
 }
 
-/* --- EFECTO TARJETA FLIP 3D (Estructura y Animación) --- */
+/* --- Ingeniería del Efecto Flip Tarjeta --- */
 .card-container {
-    perspective: 1000px; /* Crea el espacio 3D para el efecto de profundidad */
-    height: 450px;       /* Altura fija para que el contenedor no colapse */
+    perspective: 2000px;
+    height: 520px;
 }
 
 .card {
     width: 100%;
     height: 100%;
     position: relative;
-    transform-style: preserve-3d; /* Permite que los hijos hereden el entorno 3D */
-    transition: var(--transition);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    border-radius: 20px;
+    transform-style: preserve-3d;
+    transition: var(--transition-smooth);
 }
 
-/* Acción de girar al pasar el ratón (o hacer tap) */
 .card-container:hover .card {
     transform: rotateY(180deg);
 }
 
-/* Configuración básica de caras frontales y traseras */
 .card-front, .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; /* Esconde la cara opuesta cuando gira */
-    border-radius: 20px;
+    backface-visibility: hidden;
+    border-radius: 24px;
     overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-/* CARA FRONTAL */
+/* Tarjeta Frontal */
 .card-front {
-    background: #ffffff;
+    background: var(--light-surface);
     display: flex;
     flex-direction: column;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.03);
+}
+
+.dark-card-front {
+    background: var(--dark-surface) !important;
+    border: 1px solid rgba(255, 255, 255, 0.03) !important;
 }
 
 .card-img {
-    height: 230px;
+    height: 270px;
     background-size: cover;
     background-position: center;
+    filter: saturate(1.05);
+    transition: var(--transition-smooth);
 }
 
-/* Imágenes estéticas de Unsplash */
+.card-container:hover .card-img {
+    transform: scale(1.05);
+}
+
+/* Enlaces de Recursos de Imágenes de Alta Estética */
 .bg-cosmetic-1 { background-image: url('https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=600'); }
 .bg-cosmetic-2 { background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=600'); }
 .bg-tech-1 { background-image: url('https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?q=80&w=600'); }
 .bg-tech-2 { background-image: url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=600'); }
 
 .card-body {
-    padding: 20px;
-    text-align: center;
+    padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     flex-grow: 1;
 }
 
 .card-body h3 {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
 }
 
 .card-body p {
-    font-size: 13px;
-    color: #666;
-    margin-bottom: 10px;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.card-footer-front {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
 }
 
 .price {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 800;
-    color: var(--dark-color);
-    margin-bottom: 10px;
+    color: var(--dark-deep);
 }
 
-/* Botón estético simulado en el frente */
 .btn-card-trigger {
-    display: inline-block;
-    padding: 10px;
-    background: transparent;
-    border: 2px solid var(--dark-color);
-    color: var(--dark-color);
-    font-weight: 600;
-    border-radius: 10px;
-    text-transform: uppercase;
     font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
     letter-spacing: 1px;
-    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border: 1px solid var(--dark-deep);
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition-smooth);
 }
 
-/* CARA TRASERA */
+/* Tarjeta Trasera (Detalle Camuflado) */
 .card-back {
     background-size: cover;
     background-position: center;
-    transform: rotateY(180deg); /* Coloca la cara trasera invertida inicialmente */
+    transform: rotateY(180deg);
 }
 
-/* Superposición oscura del fondo para que resalte el texto del detalle */
 .card-back-overlay {
     width: 100%;
     height: 100%;
-    background-color: rgba(17, 20, 26, 0.9); /* Capa oscura (90% opacidad) */
-    padding: 30px 25px;
-    color: #ffffff;
+    background-color: rgba(10, 12, 16, 0.94); /* Oscurecimiento premium */
+    padding: 40px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -266,109 +349,129 @@ body {
 }
 
 .card-back-overlay h3 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 800;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-    background: var(--gradient-glow);
+    margin-bottom: 20px;
+    background: var(--gradient-cosmetic);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .card-back-overlay p {
-    font-size: 13px;
-    font-weight: 300;
-    line-height: 1.6;
-    margin-bottom: 25px;
-    color: #e0e0e0;
+    font-size: 14px;
+    color: #cbd5e1;
+    line-height: 1.7;
+    font-weight: 400;
+    margin-bottom: 35px;
 }
 
-/* Botón de acción definitivo dentro del detalle */
 .btn-action {
-    padding: 12px 25px;
-    background: var(--gradient-glow);
+    padding: 14px 30px;
+    background: var(--gradient-cosmetic);
     border: none;
-    color: white;
-    font-weight: 600;
+    color: #ffffff;
+    font-weight: 700;
     text-transform: uppercase;
     font-size: 11px;
-    border-radius: 50px;
-    letter-spacing: 1px;
+    border-radius: 10px;
+    letter-spacing: 1.5px;
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(255, 74, 125, 0.3);
-    transition: all 0.3s ease;
+    transition: var(--transition-smooth);
 }
 
 .btn-action:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 242, 254, 0.4);
 }
 
-/* --- Pie de Página --- */
+/* --- Footer Elegante --- */
 .footer {
-    background-color: var(--dark-color);
-    color: #ffffff;
-    padding: 60px 20px;
+    background-color: var(--dark-deep);
+    padding: 80px 20px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.footer-glow {
+    position: absolute;
+    top: -150px; left: 50%; transform: translateX(-50%);
+    width: 300px; height: 300px;
+    background: var(--primary-glow);
+    filter: blur(150px);
+    opacity: 0.15;
+    pointer-events: none;
 }
 
 .motivation-phrase {
-    font-style: italic;
-    font-size: 20px;
+    font-size: clamp(18px, 2.5vw, 24px);
     font-weight: 300;
-    max-width: 700px;
-    margin: 0 auto 25px auto;
-    color: #e0e0e0;
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #f8fafc;
+    line-height: 1.5;
+}
+
+.footer-divider {
+    width: 40px;
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+    margin: 30px auto;
 }
 
 .copyright {
-    font-size: 12px;
-    color: #777;
+    font-size: 11px;
+    color: #64748b;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
-/* --- Botón de WhatsApp Flotante --- */
+/* --- Botón de WhatsApp Hiper-Detallado con Ondas de Pulso --- */
 .whatsapp-btn {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
+    bottom: 35px;
+    right: 35px;
+    width: 65px;
+    height: 65px;
     background-color: #25d366;
-    color: white;
-    border-radius: 50px;
+    color: #ffffff;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    font-size: 32px;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
     z-index: 9999;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: var(--transition-smooth);
+}
+
+.pulse-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #25d366;
+    border-radius: 50%;
+    animation: pulseWave 2s infinite;
+    z-index: -1;
+}
+
+@keyframes pulseWave {
+    0% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(1.5); opacity: 0; }
 }
 
 .whatsapp-btn:hover {
-    transform: scale(1.1) rotate(10deg);
-    background-color: #20ba5a;
+    transform: scale(1.1);
+    background-color: #1ebd54;
 }
 
-/* --- Adaptabilidad (Responsive) --- */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        padding: 15px;
-    }
-    .nav {
-        margin-top: 15px;
-    }
-    .nav a {
-        margin: 0 10px;
-    }
-    .hero-content h1 {
-        font-size: 32px;
-    }
-    .hero-content p {
-        font-size: 16px;
-    }
+/* --- Diseño Adaptativo (Responsive Eficiente) --- */
+@media (max-width: 900px) {
+    .header { padding: 20px 5%; flex-direction: column; gap: 15px; }
+    .nav a { margin: 0 15px; font-size: 12px; }
+    .hero { min-height: 75vh; }
+    .grid-products { grid-template-columns: 1fr; max-width: 450px; }
+    .card-container { height: 500px; }
 }
