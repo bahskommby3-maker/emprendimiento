@@ -1,12 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emprendimiento</title>
+    <title>Beauty & Tech | Cosméticos y Tecnología</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
+    <header class="header">
+        <div class="logo">BEAUTY<span>TECH</span></div>
+        <nav class="nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#cosmeticos">Cosméticos</a>
+            <a href="#tecnologia">Tecnología</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>El futuro de la belleza y la innovación</h1>
+            <p>Descubre la fusión perfecta entre el cuidado personal premium y los gadgets tecnológicos de última generación.</p>
+            <a href="#cosmeticos" class="btn-primary">Explorar Tienda</a>
+        </div>
+    </section>
+
+    <section id="cosmeticos" class="products-section">
+        <h2 class="section-title">Cosmética Premium</h2>
+        <div class="grid-products">
+            
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <div class="card-img bg-cosmetic-1"></div>
+                        <div class="card-body">
+                            <h3>Sérum Renovador</h3>
+                            <p>Fórmula avanzada con ácido hialurónico para una piel radiante.</p>
+                            <span class="price">$29.99</span>
+                            <span class="btn-card-trigger">Ver Detalle</span>
+                        </div>
+                    </div>
+                    <div class="card-back bg-cosmetic-1">
+                        <div class="card-back-overlay">
+                            <h3>Detalles del Producto</h3>
+                            <p>Este sérum de última generación estimula la producción natural de colágeno, reduce líneas de expresión y proporciona una hidratación profunda durante 24 horas. Ideal para todo tipo de pieles.</p>
+                            <button class="btn-action">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <div class="card-img bg-cosmetic-2"></div>
+                        <div class="card-body">
+                            <h3>Paleta Neo-Glow</h3>
+                            <p>Pigmentación de larga duración con destellos futuristas y elegantes.</p>
+                            <span class="price">$35.50</span>
+                            <span class="btn-card-trigger">Ver Detalle</span>
+                        </div>
+                    </div>
+                    <div class="card-back bg-cosmetic-2">
+                        <div class="card-back-overlay">
+                            <h3>Detalles del Producto</h3>
+                            <p>Incluye 12 tonos de alta definición hiper-pigmentados. Una mezcla perfecta de acabados mate aterciopelados y metálicos brillantes diseñados para resistir todo el día sin pliegues.</p>
+                            <button class="btn-action">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="tecnologia" class="products-section bg-light">
+        <h2 class="section-title">Tecnología & Gadgets</h2>
+        <div class="grid-products">
+            
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <div class="card-img bg-tech-1"></div>
+                        <div class="card-body">
+                            <h3>Smartwatch Aura V3</h3>
+                            <p>Monitoreo inteligente de salud, notificaciones y diseño ultradelgado.</p>
+                            <span class="price">$120.00</span>
+                            <span class="btn-card-trigger">Ver Detalle</span>
+                        </div>
+                    </div>
+                    <div class="card-back bg-tech-1">
+                        <div class="card-back-overlay">
+                            <h3>Detalles del Producto</h3>
+                            <p>Equipado con sensor de ritmo cardíaco continuo, medición de oxígeno en sangre SpO2, tracking de sueño profundo y batería de larga duración (hasta 10 días de uso continuo). Sumergible a 5 ATM.</p>
+                            <button class="btn-action">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <div class="card-img bg-tech-2"></div>
+                        <div class="card-body">
+                            <h3>Wireless NeoSound</h3>
+                            <p>Cancelación de ruido activa y audio de alta fidelidad para tu día a día.</p>
+                            <span class="price">$89.99</span>
+                            <span class="btn-card-trigger">Ver Detalle</span>
+                        </div>
+                    </div>
+                    <div class="card-back bg-tech-2">
+                        <div class="card-back-overlay">
+                            <h3>Detalles del Producto</h3>
+                            <p>Auriculares premium con tecnología ANC de última generación que bloquea el ruido exterior. Conectividad Bluetooth 5.2 estable, estuche de carga rápida inalámbrica y 30 horas de autonomía total.</p>
+                            <button class="btn-action">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contacto" class="footer">
+        <div class="footer-content">
+            <p class="motivation-phrase">"La verdadera innovación externa comienza cuando decides brillar desde el interior."</p>
+            <p class="copyright">&copy; 2026 BEAUTYTECH. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5544444448" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contacto por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
 </body>
 </html>
